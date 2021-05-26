@@ -1,26 +1,73 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
+import { render } from 'react-dom';
+//import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Link to="/post">go to post</Link>
+      <Router>
+        <Switch>
+          <Route path="/post">
+          </Route>
+          <Route path="/messages">
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
 
+
+
+
+
 export default App;
+
+
+
+
+
+// interface MySecondComponentProps {
+//   firstName : string;
+//   lastName : string;
+// }
+
+
+// interface MySecondCompenetState {
+//   numberOfLikes : number;
+// }
+
+
+
+// interface MayoManProps {
+//   numberofears: number;
+//   numberofhands: number;
+// }
+
+// interface MayoManState {
+//   jarsOfMayoAte: number;
+// }
+
+
+// class MayoMan extends React.Component<MySecondComponentProps,MySecondCompenetState> {
+//   constructor(props:MySecondComponentProps) {
+//     super(props);
+//     this.state = {numberOfLikes : 0}
+//   }
+
+//   addTheLike(){
+//     this.setState({numberOfLikes : this.state.numberOfLikes + 1})
+//   }
+
+
+
+
