@@ -4,6 +4,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import { render } from 'react-dom';
 //import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+import {Landing} from './Landing';
+import {PostPage} from './Post';
 
 
 
@@ -13,12 +15,14 @@ import { render } from 'react-dom';
 function App() {
   return (
     <div className="App">
-    <Link to="/post">go to post</Link>
+    
       <Router>
         <Switch>
-          <Route path="/post">
+        <Route path="/post">
+            <PostPage></PostPage>
           </Route>
-          <Route path="/messages">
+          <Route path="/">
+            <Landing></Landing>
           </Route>
         </Switch>
       </Router>
